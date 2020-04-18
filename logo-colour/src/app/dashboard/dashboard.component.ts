@@ -1,5 +1,10 @@
 import { Component, OnInit } from "@angular/core";
 import { LogoModel } from "../models/logo_model";
+import { FormControl } from '@angular/forms';
+import { Observable, BehaviorSubject } from 'rxjs';
+import { fromEvent } from 'rxjs';
+import { switchMap } from 'rxjs/operators';
+
 @Component({
   selector: "app-dashboard",
   templateUrl: "./dashboard.component.html",
@@ -7,10 +12,12 @@ import { LogoModel } from "../models/logo_model";
 })
 export class DashboardComponent implements OnInit {
   appIcons: LogoModel[];
+  search = new FormControl();
 
   constructor() {}
 
   ngOnInit() {
+
     this.appIcons = [
       {
         img: "messenger.png",
@@ -70,7 +77,24 @@ export class DashboardComponent implements OnInit {
           { hex: "#E31837", rgb: "(227,24,55)", cmyk: "(5,100,83,1)" },
           { hex: "#005DAA", rgb: "(0,93,170)", cmyk: "(94,68,1,0)" }
         ]
+      },
+      {
+        img: "redbull.png",
+        name: "red bull",
+        colours: [
+          { hex: "#CC1E4A", rgb: "(204,31,75)", cmyk: "(13,100,66,2)" },
+          { hex: "#FFC906", rgb: "(255,202,6)", cmyk: "(0,20,100,0)" }
+        ]
       }
     ];
+
+    this.appIcons.sort((a, b) => a.name < b.name ? -1 : (a.name > b.name ? 1 : 0));
   }
+
+  onSearch() {
+    
+  }
+
+
+
 }

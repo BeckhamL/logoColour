@@ -2,6 +2,8 @@
   <div class="title_text">Find the colours of some of the worlds biggest apps!</div>
 </div>
 
+<input [formControl]="search" (input)="onSearch()">
+
 <div class="_flex _flex_wrap _justify_center">
 
   <span *ngFor="let app of appIcons" class="card_wrapper">

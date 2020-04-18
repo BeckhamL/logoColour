@@ -14,9 +14,9 @@
       <div *ngFor="let appColor of app?.colours" class="_flex _flex_align_item_center color_element">
         <div [ngStyle]="{'background-color': appColor?.hex}" class="color_box"></div>
         <div class="_flex_col">
-          <div class="color_text">HEX: {{ appColor?.hex | uppercase }} </div>
-          <div class="color_text">RGB: {{ appColor?.rgb }} </div>
-          <div class="color_text">CMYK: {{ appColor?.cmyk }} </div>
+          <div class="color_text" [cdkCopyToClipboard]="appColor?.hex" (click)="onClickAddToClipboard(appColor?.hex)">HEX: {{ appColor?.hex | uppercase }} </div>
+          <div class="color_text" [cdkCopyToClipboard]="appColor?.rgb" (click)="onClickAddToClipboard(appColor?.rgb)">RGB: {{ appColor?.rgb }} </div>
+          <div class="color_text" [cdkCopyToClipboard]="appColor?.cmyk" (click)="onClickAddToClipboard(appColor?.cmyk)">CMYK: {{ appColor?.cmyk }} </div>
         </div>
       </div>
     </div>
