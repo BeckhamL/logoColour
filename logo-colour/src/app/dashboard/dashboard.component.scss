@@ -1,9 +1,11 @@
 @import '../../assets/scss/main';
 
-.icon_border {
-    height: 300px;
-    min-width: 49%;
-    background: #222831;
-    margin: 5px;
-    border-radius: 10px;
+.title_text {
+  color: white;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.card_wrapper {
+  min-width: 49%;
 }
