@@ -3,20 +3,20 @@
   <div class="_flex">
     <div class="_flex_col _justify_center" fxFlex="50%">
       <div class="_flex _justify_center">
-        <img src="../../../assets/images/{{app.img}}">
+        <div class="_flex _flex_align_item_center image_wrapper">
+            <img src="../../../assets/images/{{app.img}}">
+        </div>
       </div>
       <div class="icon_title_text">{{ app.name | uppercase }}</div>
     </div>
 
     <div class="_flex_col" fxFlex="50%">
       <div *ngFor="let appColor of app?.colours" class="_flex _flex_align_item_center color_element">
-        <div [ngStyle]="{'background-color': appColor?.hex}">
-          <div class="color_box"></div>
-        </div>
-        <div class="_flex_col color_text">
-          <div>HEX: {{ appColor?.hex }} </div>
-          <div>RGB: {{ appColor?.rgb }} </div>
-          <div>CMYK: {{ appColor?.cmyk }} </div>
+        <div [ngStyle]="{'background-color': appColor?.hex}" class="color_box"></div>
+        <div class="_flex_col">
+          <div class="color_text">HEX: {{ appColor?.hex | uppercase }} </div>
+          <div class="color_text">RGB: {{ appColor?.rgb }} </div>
+          <div class="color_text">CMYK: {{ appColor?.cmyk }} </div>
         </div>
       </div>
     </div>
