@@ -17,6 +17,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
       AppRoutingModule,
       FlexLayoutModule
    ],
+   exports: [IconCardComponent],
    providers: [],
    bootstrap: [
       AppComponent

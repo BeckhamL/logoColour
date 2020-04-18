@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, OnInit, Input } from '@angular/core';
+import { LogoModel } from '../../models/logo_model';
 @Component({
   selector: 'app-icon-card',
   templateUrl: './icon-card.component.html',
@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IconCardComponent implements OnInit {
 
+  @Input()
+  app: LogoModel;
+  
   constructor() { }
 
   ngOnInit() {

@@ -4,8 +4,8 @@
 
 <div class="_flex _flex_wrap _justify_center">
 
-  <span *ngFor="let num of [1,2,3,4,5]" class="card_wrapper">
-    <app-icon-card></app-icon-card>
+  <span *ngFor="let app of appIcons" class="card_wrapper">
+    <app-icon-card [app]="app"></app-icon-card>
   </span>
 
 </div>
