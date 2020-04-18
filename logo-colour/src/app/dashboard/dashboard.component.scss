@@ -9,3 +9,23 @@
 .card_wrapper {
   min-width: 49%;
 }
+
+.intro_wrapper {
+  height: 400px;
+  padding: 50px;
+}
+
+input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+mat-toolbar {
+  top: 0;
+  position: sticky;
+}

@@ -2,8 +2,17 @@
   display: flex;
 }
 
+._flex_col {
+  display: flex;
+  flex-direction: column;
+}
+
 ._flex_align_item_center {
   align-items: center;
+}
+
+._flex_align_item_start {
+  align-items: flex-start;
 }
 
 ._justify_center {
@@ -12,6 +21,10 @@
 
 ._space_evenly {
   justify-content: space-evenly;
+}
+
+._space_between {
+  justify-content: space-between;
 }
 
 ._flex_wrap {

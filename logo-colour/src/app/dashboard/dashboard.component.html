@@ -1,13 +1,32 @@
-<div class="_flex _justify_center">
-  <div class="title_text">Find the colours of some of the worlds biggest apps!</div>
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <div class="_flex _space_between" fxFlex="100%">
+      <div class="title_text">APPCOLOR</div>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<div class="_flex_col _justify_center intro_wrapper">
+  <div class="_flex _flex_align_item_center ">
+    <div class="title_text">
+      SCROLL THROUGH TO FIND THE MOST POPULAR ICONS OR...
+    </div>
+  </div>
+  <div class="_flex">
+    <div class="_flex_col _flex_align_item_start">
+      <div class="title_text">SEARCH</div>
+      <input [formControl]="search" (input)="onSearch()" />
+    </div>
+  </div>
+  <div class="_flex">
+    <div class="_flex_col _flex_align_item_start">
+      <div class="title_text">FILTER</div>
+    </div>
+  </div>
 </div>
 
-<input [formControl]="search" (input)="onSearch()">
-
 <div class="_flex _flex_wrap _justify_center">
-
   <span *ngFor="let app of appIcons" class="card_wrapper">
     <app-icon-card [app]="app"></app-icon-card>
   </span>
-
 </div>

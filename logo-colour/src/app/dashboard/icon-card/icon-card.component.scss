@@ -1,7 +1,8 @@
 @import '../../../assets/scss/main';
 
 .icon_border {
-  height: 300px;
+  height: auto;
+  min-height: 356px;
   background: #222831;
   margin: 5px;
   border-radius: 10px;

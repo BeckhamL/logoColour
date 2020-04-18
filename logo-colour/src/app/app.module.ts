@@ -13,6 +13,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { MatToolbarModule } from '@angular/material/toolbar';
 @NgModule({
    declarations: [
       AppComponent,
@@ -30,7 +31,8 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
       MatSelectModule,
       MatInputModule,
       ReactiveFormsModule,
-      FormsModule
+      FormsModule,
+      MatToolbarModule
    ],
    exports: [IconCardComponent],
    providers: [],
