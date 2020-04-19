@@ -85,7 +85,110 @@ export class DashboardComponent implements OnInit {
           { hex: "#CC1E4A", rgb: "(204,31,75)", cmyk: "(13,100,66,2)" },
           { hex: "#FFC906", rgb: "(255,202,6)", cmyk: "(0,20,100,0)" }
         ]
-      }
+      },
+      {
+        img: "barnes.png",
+        name: "barnes & noble",
+        colours: [
+          { hex: "#366251", rgb: "(54,98,81)", cmyk: "(78,41,69,29)" },
+          { hex: "#C6BEB0", rgb: "(198,190,176)", cmyk: "(23,21,29,0)" }
+        ]
+      },
+      {
+        img: "amazon.png",
+        name: "amazon",
+        colours: [
+          { hex: "#FF9900", rgb: "(255,153,0)", cmyk: "(0,47,100,0)" },
+          { hex: "#000000", rgb: "(0,0,0)", cmyk: "(0,0,0,0)" }
+        ]
+      },
+      {
+        img: "acer.png",
+        name: "acer",
+        colours: [
+          { hex: "#83B81A", rgb: "(131,184,26)", cmyk: "(55,6,100,0)" }
+        ]
+      },
+      {
+        img: "lego.png",
+        name: "lego",
+        colours: [
+          { hex: "#E3000B", rgb: "(227,0,11)", cmyk: "(4,100,100,1)" },
+          { hex: "#FFED00", rgb: "(255,237,0)", cmyk: "(3,1,97,0)" },
+          { hex: "#000000", rgb: "(0,0,0)", cmyk: "(0,0,0,0)" }
+        ]
+      },
+      {
+        img: "paypal.png",
+        name: "paypal",
+        colours: [
+          { hex: "#00457C", rgb: "(0,69,124)", cmyk: "(100,57,0,40)" },
+          { hex: "#0079C1", rgb: "(0,121,193)", cmyk: "(100,44,0,0)" }
+        ]
+      },
+      {
+        img: "budlight.png",
+        name: "bud light",
+        colours: [
+          { hex: "#061148", rgb: "(6,17,72)", cmyk: "(100,97,34,46)" },
+          { hex: "#00A1E1", rgb: "(0,161,225)", cmyk: "(74,21,0,0)" }
+        ]
+      },
+      {
+        img: "pokemon.png",
+        name: "pokemon",
+        colours: [
+          { hex: "#FFCB05", rgb: "(255,203,5)", cmyk: "(0,20,100,0)" },
+          { hex: "#3D7DCA", rgb: "(61,125,202)", cmyk: "(76,47,0,0)" },
+          { hex: "#003A70", rgb: "(0,58,112)", cmyk: "(100,84,31,17)" }
+        ]
+      },
+      {
+        img: "tmobile.png",
+        name: "t-mobile",
+        colours: [
+          { hex: "#ED008C", rgb: "(237,0,140)", cmyk: "(0,99,1,0)" },
+          { hex: "#999B9E", rgb: "(153,155,158)", cmyk: "(43,34,33,1)" }
+        ]
+      },
+      {
+        img: "canon.png",
+        name: "canon",
+        colours: [
+          { hex: "#BF1920", rgb: "(191,25,32)", cmyk: "(18,100,100,8)" }
+        ]
+      },
+      {
+        img: "twitter.png",
+        name: "twitter",
+        colours: [
+          { hex: "#1DA1F2", rgb: "(29,161,242)", cmyk: "(69,26,0,0)" }
+        ]
+      },
+      {
+        img: "youtube.png",
+        name: "youtube",
+        colours: [
+          { hex: "#FF0000", rgb: "(255,0,0)", cmyk: "(0,95,100,0)" },
+          { hex: "#282828", rgb: "(40,40,40)", cmyk: "(0,0,0,100)" }
+        ]
+      },
+      {
+        img: "linkedin.png",
+        name: "linkedin",
+        colours: [
+          { hex: "#2867B2", rgb: "(40,103,178)", cmyk: "(87,61,0,0)" },
+          { hex: "#ffffff", rgb: "(255,255,255)", cmyk: "(0,0,0,0)" }
+        ]
+      },
+      {
+        img: "twitch.png",
+        name: "twitch",
+        colours: [
+          { hex: "#6441A4", rgb: "(100,65,164)", cmyk: "(69,75,0,0)" },
+          { hex: "#ffffff", rgb: "(255,255,255)", cmyk: "(0,0,0,0)" }
+        ]
+      },
     ];
 
     this.appIcons.sort((a, b) => a.name < b.name ? -1 : (a.name > b.name ? 1 : 0));

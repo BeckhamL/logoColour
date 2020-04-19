@@ -12,14 +12,14 @@
 
     <div class="_flex_col" fxFlex="50%">
       <div *ngFor="let appColor of app?.colours" class="_flex _flex_align_item_center color_element">
-        <div [ngStyle]="{'background-color': appColor?.hex}" class="color_box"></div>
+        <div [ngStyle]="{'background-color': appColor?.hex}" class="color_box" [cdkCopyToClipboard]="appColor?.hex" (click)="onClickAddToClipboard(appColor?.hex)"></div>
         <div class="_flex_col">
           <div class="color_text" [cdkCopyToClipboard]="appColor?.hex" (click)="onClickAddToClipboard(appColor?.hex)">
-            HEX: {{ appColor?.hex | uppercase }} </div>
+            HEX: <span>{{ appColor?.hex | uppercase }}</span> </div>
           <div class="color_text" [cdkCopyToClipboard]="appColor?.rgb" (click)="onClickAddToClipboard(appColor?.rgb)">
-            RGB: {{ appColor?.rgb }} </div>
+            RGB: <span>{{ appColor?.rgb }} </span> </div>
           <div class="color_text" [cdkCopyToClipboard]="appColor?.cmyk" (click)="onClickAddToClipboard(appColor?.cmyk)">
-            CMYK: {{ appColor?.cmyk }} </div>
+            CMYK: <span>{{ appColor?.cmyk }}</span> </div>
         </div>
       </div>
     </div>

@@ -38,6 +38,7 @@ img {
   width: 90px;
   height: 90px;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .color_text {
@@ -45,4 +46,8 @@ img {
   font-size: 20px;
   margin: 5px 0px 5px 10px;
   cursor: pointer;
+
+  // span {
+  //   text-decoration: underline;
+  // }
 }
