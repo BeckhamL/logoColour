@@ -13,8 +13,8 @@ import Typed from 'typed.js';
 export class DashboardComponent implements OnInit {
 
   appIcons: LogoModel[];
-  search = new FormControl();
   searchText = '';
+  color = '#ffffff';
   typedOptions = {
     strings: ['AMAZON', 'DISCORD', 'LEGO', 'PINTEREST', 'MESSENGER', 'SNAPCHAT'],
     typeSpeed: 110,
@@ -271,10 +271,6 @@ export class DashboardComponent implements OnInit {
     );
   }
 
-  onSearch() {
-    this.search.value;
-  }
-
   onFilterChange(filterValue: string) {
     if (filterValue === "atoz") {
       this.appIcons.sort((a, b) =>
@@ -285,5 +281,9 @@ export class DashboardComponent implements OnInit {
       a.name > b.name ? -1 : a.name < b.name ? 1 : 0
     );
     }
+  }
+
+  onColorPickChange($event) {
+    console.log($event)
   }
 }

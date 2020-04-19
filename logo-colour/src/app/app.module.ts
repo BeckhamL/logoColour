@@ -16,6 +16,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatRadioModule } from '@angular/material/radio';
 import { LogoFilterPipe } from './pipes/logo-search.pipe';
+import { ColorPickerModule } from 'ngx-color-picker';
 @NgModule({
    declarations: [
       AppComponent,
@@ -36,7 +37,8 @@ import { LogoFilterPipe } from './pipes/logo-search.pipe';
       ReactiveFormsModule,
       FormsModule,
       MatToolbarModule,
-      MatRadioModule
+      MatRadioModule,
+      ColorPickerModule
    ],
    exports: [IconCardComponent],
    providers: [],

@@ -18,12 +18,12 @@
 
     <div class="_flex_col _flex_align_item_start">
       <div class="body_text">SEARCH</div>
-      <input [formControl]="search" [(ngModel)]="searchText" placeholder="Search logos" />
+      <input [(ngModel)]="searchText" placeholder="Search logos" />
     </div>
 
     <div class="_flex_col _flex_align_item_start">
       <div class="body_text">FILTER</div>
-      <input placeholder="Filter by colour">
+      <input [(colorPicker)]="color" [style.background]="color" [value]="color" [cpOKButton]="true" (colorPickerSelect)="onColorPickChange($event)"/>
     </div>
 
     <div class="_flex_col _flex_align_item_start">
