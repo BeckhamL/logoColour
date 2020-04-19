@@ -4,7 +4,7 @@ import { FormControl } from "@angular/forms";
 import { Observable, BehaviorSubject } from "rxjs";
 import { fromEvent } from "rxjs";
 import { switchMap } from "rxjs/operators";
-
+import Typed from 'typed.js';
 @Component({
   selector: "app-dashboard",
   templateUrl: "./dashboard.component.html",
@@ -13,10 +13,19 @@ import { switchMap } from "rxjs/operators";
 export class DashboardComponent implements OnInit {
   appIcons: LogoModel[];
   search = new FormControl();
+  options = {
+    strings: ['AMAZON', 'DISCORD', 'LEGO', 'PINTEREST'],
+    typeSpeed: 120,
+    backSpeed: 60,
+    showCursor: false,
+    loop: true
+  };
+  typed: any;
 
   constructor() {}
 
   ngOnInit() {
+    this.typed = new Typed('#typed', this.options);
     this.appIcons = [
       {
         img: "messenger.png",
@@ -186,10 +195,8 @@ export class DashboardComponent implements OnInit {
       },
       {
         img: "coke.png",
-        name: "coke",
-        colours: [
-          { hex: "#F40009", rgb: "(244,0,0)", cmyk: "(4,100,95,0)" }
-        ]
+        name: "coca-cola",
+        colours: [{ hex: "#F40009", rgb: "(244,0,0)", cmyk: "(4,100,95,0)" }]
       },
       {
         img: "hulu.png",
@@ -203,7 +210,7 @@ export class DashboardComponent implements OnInit {
         name: "reddit",
         colours: [
           { hex: "#FF4500", rgb: "(255,69,0)", cmyk: "(0,87,100,0)" },
-          { hex: "#000000", rgb: "(0,0,0)", cmyk: "(0,0,0,0)" } 
+          { hex: "#000000", rgb: "(0,0,0)", cmyk: "(0,0,0,0)" }
         ]
       },
       {
@@ -251,9 +258,7 @@ export class DashboardComponent implements OnInit {
       {
         img: "pandora.png",
         name: "pandora",
-        colours: [
-          { hex: "#00A0EE", rgb: "(0,160,238)", cmyk: "(71,25,0,0)" }
-        ]
+        colours: [{ hex: "#00A0EE", rgb: "(0,160,238)", cmyk: "(71,25,0,0)" }]
       }
     ];
 
@@ -263,4 +268,16 @@ export class DashboardComponent implements OnInit {
   }
 
   onSearch() {}
+
+  onFilterChange(filterValue: string) {
+    if (filterValue === "atoz") {
+      this.appIcons.sort((a, b) =>
+        a.name < b.name ? -1 : a.name > b.name ? 1 : 0
+      );
+    } else {
+      this.appIcons.sort((a, b) =>
+      a.name > b.name ? -1 : a.name < b.name ? 1 : 0
+    );
+    }
+  }
 }

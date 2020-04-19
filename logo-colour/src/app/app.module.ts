@@ -12,8 +12,9 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatRadioModule } from '@angular/material/radio';
 @NgModule({
    declarations: [
       AppComponent,
@@ -32,7 +33,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
       MatInputModule,
       ReactiveFormsModule,
       FormsModule,
-      MatToolbarModule
+      MatToolbarModule,
+      MatRadioModule
    ],
    exports: [IconCardComponent],
    providers: [],

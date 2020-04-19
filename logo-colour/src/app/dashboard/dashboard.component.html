@@ -1,27 +1,49 @@
-<mat-toolbar color="primary">
+<!-- <mat-toolbar color="primary">
   <mat-toolbar-row>
     <div class="_flex _space_between" fxFlex="100%">
       <div class="title_text">APPCOLOR</div>
     </div>
   </mat-toolbar-row>
-</mat-toolbar>
+</mat-toolbar> -->
 
 <div class="_flex_col _justify_center intro_wrapper">
   <div class="_flex _flex_align_item_center ">
-    <div class="title_text">
-      SCROLL THROUGH TO FIND THE MOST POPULAR ICONS
-    </div>
+    <p class="_flex_col title_text">
+      SCROLL THROUGH TO FIND THE COLOURS USED BY 
+      <span id="typed"></span>
+    </p>
+    
   </div>
-  <div class="_flex">
+  <div class="_flex _space_evenly">
+
     <div class="_flex_col _flex_align_item_start">
-      <div class="title_text">SEARCH</div>
-      <input [formControl]="search" (input)="onSearch()" />
+      <div class="body_text">SEARCH</div>
+      <input [formControl]="search" (input)="onSearch()" placeholder="Search logos" />
     </div>
-  </div>
-  <div class="_flex">
+
     <div class="_flex_col _flex_align_item_start">
-      <div class="title_text">FILTER</div>
+      <div class="body_text">FILTER</div>
+      <input placeholder="Filter by colour">
     </div>
+
+    <div class="_flex_col _flex_align_item_start">
+      <div class="body_text">SORT BY</div>
+      <mat-form-field>
+        <select matNativeControl (change)="onFilterChange($event.target.value)">
+          <option value="atoz">Sort Icons (A-Z)</option>
+          <option value="ztoa">Sort Icons (Z-A)</option>
+        </select>
+      </mat-form-field>
+    </div>
+
+    <div class="_flex_col _flex_align_item_start">
+      <div class="body_text">CATEGORY</div>
+      <mat-radio-group aria-label="Select an option">
+        <mat-radio-button value="1">Option 1</mat-radio-button>
+        <mat-radio-button value="2">Option 2</mat-radio-button>
+      </mat-radio-group>
+    </div>
+
   </div>
 </div>
 
@@ -29,4 +51,8 @@
   <span *ngFor="let app of appIcons" class="card_wrapper">
     <app-icon-card [app]="app"></app-icon-card>
   </span>
+</div>
+
+<div class="_flex _justify_center">
+  <span class="body_text">Made with 💖 by Beckham</span>
 </div>
