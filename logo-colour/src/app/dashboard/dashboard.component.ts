@@ -1,10 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { LogoModel } from "../models/logo_model";
-import { FormControl } from "@angular/forms";
-import { Observable, BehaviorSubject } from "rxjs";
-import { fromEvent } from "rxjs";
-import { switchMap } from "rxjs/operators";
 import Typed from 'typed.js';
+import { MatSnackBar } from '@angular/material/snack-bar';
 @Component({
   selector: "app-dashboard",
   templateUrl: "./dashboard.component.html",
@@ -25,7 +22,7 @@ export class DashboardComponent implements OnInit {
   };
   typed: Typed;
 
-  constructor() {}
+  constructor(private snackBar: MatSnackBar) {}
 
   ngOnInit() {
     this.typed = new Typed('#typed', this.typedOptions);
@@ -285,5 +282,11 @@ export class DashboardComponent implements OnInit {
 
   onColorPickChange($event) {
     console.log($event)
+  }
+
+  onClickAddLogo() {
+    this.snackBar.open('Sucessfully requested to add ' + this.searchText.toUpperCase(), 'Close', {
+      duration: 2000
+    });
   }
 }

@@ -21,10 +21,10 @@
   min-width: 49%;
 }
 
-.intro_wrapper {
-  height: 400px;
-  padding: 50px;
-}
+// .intro_wrapper {
+//   height: 400px;
+//   padding: 50px;
+// }
 
 input {
   width: 100%;
@@ -36,6 +36,42 @@ input {
   box-sizing: border-box;
   font-weight: bold;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.error_image {
+  width: 750px;
+}
+
+.button {
+  background: #00cc00;
+  color: #fff;
+  box-shadow: 0 6px #00b300;
+  border-style: none;
+  padding: 25px;
+  display: inline-block;
+  margin: 50px 0px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  font-size: 20px;
+  cursor: pointer;
+  position: relative;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.button:focus {
+  outline: 0;
+}
+
+.button:hover {
+  box-shadow: 0 4px #00b300;
+  top: 2px;
+}
+
+.button:active {
+  box-shadow: 0 0 #00b300;
+  top: 6px;
 }
 
 mat-toolbar {
