@@ -17,12 +17,14 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatRadioModule } from '@angular/material/radio';
 import { LogoFilterPipe } from './pipes/logo-search.pipe';
 import { ColorPickerModule } from 'ngx-color-picker';
+import { PopupDirective } from './directives/popup-directive';
 @NgModule({
    declarations: [
       AppComponent,
       DashboardComponent,
       IconCardComponent,
-      LogoFilterPipe
+      LogoFilterPipe,
+      PopupDirective
    ],
    imports: [
       BrowserModule,
@@ -40,7 +42,7 @@ import { ColorPickerModule } from 'ngx-color-picker';
       MatRadioModule,
       ColorPickerModule
    ],
-   exports: [IconCardComponent],
+   exports: [IconCardComponent, PopupDirective],
    providers: [],
    bootstrap: [
       AppComponent
