@@ -11,21 +11,25 @@ import Typed from 'typed.js';
   styleUrls: ["./dashboard.component.scss"]
 })
 export class DashboardComponent implements OnInit {
+
   appIcons: LogoModel[];
   search = new FormControl();
-  options = {
-    strings: ['AMAZON', 'DISCORD', 'LEGO', 'PINTEREST'],
-    typeSpeed: 120,
-    backSpeed: 60,
+  searchText = '';
+  typedOptions = {
+    strings: ['AMAZON', 'DISCORD', 'LEGO', 'PINTEREST', 'MESSENGER', 'SNAPCHAT'],
+    typeSpeed: 110,
+    backSpeed: 70,
     showCursor: false,
-    loop: true
+    loop: true,
+    shuffle: true
   };
-  typed: any;
+  typed: Typed;
 
   constructor() {}
 
   ngOnInit() {
-    this.typed = new Typed('#typed', this.options);
+    this.typed = new Typed('#typed', this.typedOptions);
+
     this.appIcons = [
       {
         img: "messenger.png",
@@ -267,7 +271,9 @@ export class DashboardComponent implements OnInit {
     );
   }
 
-  onSearch() {}
+  onSearch() {
+    this.search.value;
+  }
 
   onFilterChange(filterValue: string) {
     if (filterValue === "atoz") {

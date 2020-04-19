@@ -15,11 +15,13 @@ import { MatInputModule } from '@angular/material/input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatRadioModule } from '@angular/material/radio';
+import { LogoFilterPipe } from './pipes/logo-search.pipe';
 @NgModule({
    declarations: [
       AppComponent,
       DashboardComponent,
-      IconCardComponent
+      IconCardComponent,
+      LogoFilterPipe
    ],
    imports: [
       BrowserModule,

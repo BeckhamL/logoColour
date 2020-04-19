@@ -7,7 +7,7 @@
 </mat-toolbar> -->
 
 <div class="_flex_col _justify_center intro_wrapper">
-  <div class="_flex _flex_align_item_center ">
+  <div class="_flex _flex_align_item_center _justify_center">
     <p class="_flex_col title_text">
       SCROLL THROUGH TO FIND THE COLOURS USED BY 
       <span id="typed"></span>
@@ -18,7 +18,7 @@
 
     <div class="_flex_col _flex_align_item_start">
       <div class="body_text">SEARCH</div>
-      <input [formControl]="search" (input)="onSearch()" placeholder="Search logos" />
+      <input [formControl]="search" [(ngModel)]="searchText" placeholder="Search logos" />
     </div>
 
     <div class="_flex_col _flex_align_item_start">
@@ -48,11 +48,11 @@
 </div>
 
 <div class="_flex _flex_wrap _justify_center">
-  <span *ngFor="let app of appIcons" class="card_wrapper">
+  <span *ngFor="let app of appIcons | logoFilter: searchText" class="card_wrapper">
     <app-icon-card [app]="app"></app-icon-card>
   </span>
 </div>
 
 <div class="_flex _justify_center">
-  <span class="body_text">Made with 💖 by Beckham</span>
+  <span class="footer_text">Made with 💖 by Beckham</span>
 </div>
