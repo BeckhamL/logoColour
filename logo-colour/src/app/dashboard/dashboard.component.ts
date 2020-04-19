@@ -1,9 +1,9 @@
 import { Component, OnInit } from "@angular/core";
 import { LogoModel } from "../models/logo_model";
-import { FormControl } from '@angular/forms';
-import { Observable, BehaviorSubject } from 'rxjs';
-import { fromEvent } from 'rxjs';
-import { switchMap } from 'rxjs/operators';
+import { FormControl } from "@angular/forms";
+import { Observable, BehaviorSubject } from "rxjs";
+import { fromEvent } from "rxjs";
+import { switchMap } from "rxjs/operators";
 
 @Component({
   selector: "app-dashboard",
@@ -17,7 +17,6 @@ export class DashboardComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-
     this.appIcons = [
       {
         img: "messenger.png",
@@ -105,9 +104,7 @@ export class DashboardComponent implements OnInit {
       {
         img: "acer.png",
         name: "acer",
-        colours: [
-          { hex: "#83B81A", rgb: "(131,184,26)", cmyk: "(55,6,100,0)" }
-        ]
+        colours: [{ hex: "#83B81A", rgb: "(131,184,26)", cmyk: "(55,6,100,0)" }]
       },
       {
         img: "lego.png",
@@ -161,9 +158,7 @@ export class DashboardComponent implements OnInit {
       {
         img: "twitter.png",
         name: "twitter",
-        colours: [
-          { hex: "#1DA1F2", rgb: "(29,161,242)", cmyk: "(69,26,0,0)" }
-        ]
+        colours: [{ hex: "#1DA1F2", rgb: "(29,161,242)", cmyk: "(69,26,0,0)" }]
       },
       {
         img: "youtube.png",
@@ -189,15 +184,83 @@ export class DashboardComponent implements OnInit {
           { hex: "#ffffff", rgb: "(255,255,255)", cmyk: "(0,0,0,0)" }
         ]
       },
+      {
+        img: "coke.png",
+        name: "coke",
+        colours: [
+          { hex: "#F40009", rgb: "(244,0,0)", cmyk: "(4,100,95,0)" }
+        ]
+      },
+      {
+        img: "hulu.png",
+        name: "hulu",
+        colours: [
+          { hex: "#3DBB3D", rgb: "(102,170,50)", cmyk: "(66,11,100,1)" }
+        ]
+      },
+      {
+        img: "reddit.png",
+        name: "reddit",
+        colours: [
+          { hex: "#FF4500", rgb: "(255,69,0)", cmyk: "(0,87,100,0)" },
+          { hex: "#000000", rgb: "(0,0,0)", cmyk: "(0,0,0,0)" } 
+        ]
+      },
+      {
+        img: "whatsapp.png",
+        name: "whatsapp",
+        colours: [
+          { hex: "#4AC959", rgb: "(74,201,89)", cmyk: "(66,0,87,0)" },
+          { hex: "#455A64", rgb: "(69,90,100)", cmyk: "(75,55,47,24)" },
+          { hex: "#ffffff", rgb: "(255,255,255)", cmyk: "(0,0,0,0)" }
+        ]
+      },
+      {
+        img: "pinterest.png",
+        name: "pinterest",
+        colours: [
+          { hex: "#BD081C", rgb: "(189,8,28)", cmyk: "(18,100,100,9)" },
+          { hex: "#ffffff", rgb: "(255,255,255)", cmyk: "(0,0,0,0)" }
+        ]
+      },
+      {
+        img: "mcdonalds.png",
+        name: "mcdonalds",
+        colours: [
+          { hex: "#FFC72C", rgb: "(255,199,44)", cmyk: "(0,100,91,0)" },
+          { hex: "#DA291C", rgb: "(218,41,28)", cmyk: "(0,30,94,0)" },
+          { hex: "#ffffff", rgb: "(255,255,255)", cmyk: "(0,0,0,0)" }
+        ]
+      },
+      {
+        img: "oldnavy.png",
+        name: "old navy",
+        colours: [
+          { hex: "#163E69", rgb: "(22,62,105)", cmyk: "(99,80,33,21)" },
+          { hex: "#ffffff", rgb: "(255,255,255)", cmyk: "(0,0,0,0)" }
+        ]
+      },
+      {
+        img: "levi.png",
+        name: "levi",
+        colours: [
+          { hex: "#C41230", rgb: "(196, 18, 48)", cmyk: "(0,100,79,20)" },
+          { hex: "#ffffff", rgb: "(255,255,255)", cmyk: "(0,0,0,0)" }
+        ]
+      },
+      {
+        img: "pandora.png",
+        name: "pandora",
+        colours: [
+          { hex: "#00A0EE", rgb: "(0,160,238)", cmyk: "(71,25,0,0)" }
+        ]
+      }
     ];
 
-    this.appIcons.sort((a, b) => a.name < b.name ? -1 : (a.name > b.name ? 1 : 0));
+    this.appIcons.sort((a, b) =>
+      a.name < b.name ? -1 : a.name > b.name ? 1 : 0
+    );
   }
 
-  onSearch() {
-    
-  }
-
-
-
+  onSearch() {}
 }
