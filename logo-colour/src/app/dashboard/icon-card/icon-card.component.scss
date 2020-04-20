@@ -3,16 +3,16 @@
 .icon_border {
   height: auto;
   min-height: 356px;
-  background: #F5F5F5;
+  background: white;
   margin: 10px;
   border-radius: 10px;
   padding: 30px;
-  box-shadow: 0px 3px 6px #00000018;
+  box-shadow: 3px 3px 10px #cccccc;
 }
 
 .icon_title_text {
   font-size: 50px;
-  letter-spacing: 0.36px;
+  letter-spacing: 1.5px;
   font-weight: bold;
   text-align: center;
   margin-top: 5px;
@@ -23,7 +23,7 @@
   width: 290px;
   background: white;
   border-radius: 10px;
-  box-shadow: 0px 3px 6px #00000018;
+  box-shadow: 1px 1px 8px #cccccc;
   padding: 20px;
 }
 
@@ -36,8 +36,8 @@ img {
 }
 
 .color_box {
-  width: 90px;
-  height: 90px;
+  width: 160px;
+  height: 100px;
   border-radius: 10px;
   cursor: pointer;
   box-shadow: 0px 3px 6px #00000018;
@@ -45,10 +45,10 @@ img {
 
 .color_text {
   font-size: 20px;
+  font-weight: 500;
   margin: 5px 0px 5px 10px;
-  cursor: pointer;
 
-  // span {
-  //   text-decoration: underline;
-  // }
+  span {
+    cursor: pointer;
+  }
 }

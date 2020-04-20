@@ -7,15 +7,15 @@
 </mat-toolbar> -->
 
 <div class="_flex_col _justify_center intro_wrapper">
+
   <div class="_flex _flex_align_item_center _justify_center">
     <p class="_flex_col title_text">
       SCROLL THROUGH TO FIND THE COLOURS USED BY
       <span id="typed"></span>
     </p>
-
   </div>
-  <div class="_flex _space_evenly">
 
+  <div class="_flex _space_evenly filter_wrapper" fxLayout.md="column">
     <div class="_flex_col _flex_align_item_start">
       <div class="body_text">SEARCH</div>
       <input [(ngModel)]="searchText" placeholder="Search logos" />
@@ -23,7 +23,7 @@
 
     <div class="_flex_col _flex_align_item_start">
       <div class="body_text">FILTER</div>
-      <input [(colorPicker)]="color" [style.background]="color" [value]="color" [cpOKButton]="true"
+      <input [(colorPicker)]="color" [style.background]="color" [value]="color" [cpOKButton]="true" [cpCancelButton]="true" [cpCancelButtonText]="'CLEAR'"
         (colorPickerSelect)="onColorPickChange($event)" />
     </div>
 
@@ -44,15 +44,15 @@
         <mat-radio-button value="2">Option 2</mat-radio-button>
       </mat-radio-group>
     </div>
-
   </div>
+
 </div>
 
 <div class="_flex _flex_wrap _justify_center">
   <div *ngIf="(appIcons | logoFilter: searchText).length === 0">
     <div class="_flex _flex_align_item_center">
       <div>
-        <img src="../../assets/images/fogg-page-not-found.png" class="error_image">
+        <img src="../../assets/images/clip-programming.png" class="error_image">
       </div>
       <div class="_flex_col">
         <span class="body_text">SORRY, WE COULDN'T FIND '{{searchText}}' <br> CLICK THIS BUTTON AND WE'LL ADD IT <br> (I PROMISE)</span>
@@ -68,5 +68,5 @@
 </div>
 
 <div class="_flex _justify_center">
-  <span class="footer_text">Made with 💖 by Beckham</span>
+  <span class="footer_text">Made with 💖 by Beckham give credit to icons8</span>
 </div>

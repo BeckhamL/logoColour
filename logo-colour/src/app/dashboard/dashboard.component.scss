@@ -21,12 +21,17 @@
   min-width: 49%;
 }
 
+.filter_wrapper {
+  margin: 50px 0px;
+}
+
 // .intro_wrapper {
 //   height: 400px;
 //   padding: 50px;
 // }
 
 input {
+  max-width: 200px;
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;

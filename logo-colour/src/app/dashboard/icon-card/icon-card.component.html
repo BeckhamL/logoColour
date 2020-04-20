@@ -16,11 +16,11 @@
           tippyPopup [toolTipText]="appColor?.hex"></div>
         <div class="_flex_col">
           <div class="color_text" [cdkCopyToClipboard]="appColor?.hex">
-            HEX: <span>{{ appColor?.hex | uppercase }}</span> </div>
+            HEX: <span tippyPopup [toolTipText]="appColor?.hex">{{ appColor?.hex | uppercase }}</span> </div>
           <div class="color_text" [cdkCopyToClipboard]="appColor?.rgb">
-            RGB: <span>{{ appColor?.rgb }} </span> </div>
+            RGB: <span tippyPopup [toolTipText]="appColor?.rgb">{{ appColor?.rgb }} </span> </div>
           <div class="color_text" [cdkCopyToClipboard]="appColor?.cmyk">
-            CMYK: <span>{{ appColor?.cmyk }}</span> </div>
+            CMYK: <span tippyPopup [toolTipText]="appColor?.cmyk">{{ appColor?.cmyk }}</span> </div>
         </div>
       </div>
     </div>
