@@ -1,19 +1,25 @@
 import { Component, OnInit } from "@angular/core";
 import { LogoModel } from "../models/logo_model";
-import Typed from 'typed.js';
-import { MatSnackBar } from '@angular/material/snack-bar';
+import Typed from "typed.js";
+import { MatSnackBar } from "@angular/material/snack-bar";
 @Component({
   selector: "app-dashboard",
   templateUrl: "./dashboard.component.html",
   styleUrls: ["./dashboard.component.scss"]
 })
 export class DashboardComponent implements OnInit {
-
   appIcons: LogoModel[];
-  searchText = '';
-  color = '#ffffff';
+  searchText = "";
+  color = "#ffffff";
   typedOptions = {
-    strings: ['AMAZON', 'DISCORD', 'LEGO', 'PINTEREST', 'MESSENGER', 'SNAPCHAT'],
+    strings: [
+      "AMAZON",
+      "DISCORD",
+      "LEGO",
+      "PINTEREST",
+      "MESSENGER",
+      "SNAPCHAT"
+    ],
     typeSpeed: 110,
     backSpeed: 70,
     showCursor: false,
@@ -25,7 +31,7 @@ export class DashboardComponent implements OnInit {
   constructor(private snackBar: MatSnackBar) {}
 
   ngOnInit() {
-    this.typed = new Typed('#typed', this.typedOptions);
+    this.typed = new Typed("#typed", this.typedOptions);
 
     this.appIcons = [
       {
@@ -260,6 +266,90 @@ export class DashboardComponent implements OnInit {
         img: "pandora.png",
         name: "pandora",
         colours: [{ hex: "#00A0EE", rgb: "(0,160,238)", cmyk: "(71,25,0,0)" }]
+      },
+      {
+        img: "wholefoods.png",
+        name: "whole foods",
+        colours: [{ hex: "#00674B", rgb: "(0,103,75)", cmyk: "(90,35,78,26)" }]
+      },
+      {
+        img: "nintendo.png",
+        name: "nintendo",
+        colours: [{ hex: "#E60012", rgb: "(230,0,18)", cmyk: "(3,100,100,1)" }]
+      },
+      {
+        img: "starbucks.png",
+        name: "starbucks",
+        colours: [
+          { hex: "#00704A", rgb: "(0,112,74)", cmyk: "(100,0,78,42)" },
+          { hex: "#ffffff", rgb: "(255,255,255)", cmyk: "(0,0,0,0)" }
+        ]
+      },
+      {
+        img: "asus.png",
+        name: "asus",
+        colours: [{ hex: "#00539B", rgb: "(0,83,155)", cmyk: "(99,75,8,1)" }]
+      },
+      {
+        img: "periscope.png",
+        name: "periscope",
+        colours: [
+          { hex: "#40A4C4", rgb: "(64,164,196)", cmyk: "(70,19,16,0)" },
+          { hex: "#E94F3C", rgb: "(233,79,60)", cmyk: "(3,84,82,1)" },
+          { hex: "#ffffff", rgb: "(255,255,255)", cmyk: "(0,0,0,0)" }
+        ]
+      },
+      {
+        img: "cvs.png",
+        name: "cvs",
+        colours: [{ hex: "#CC0000", rgb: "(204,0,0)", cmyk: "(13,100,100,4)" }]
+      },
+      {
+        img: "tencent.png",
+        name: "tencent",
+        colours: [
+          { hex: "#3458b0", rgb: "(52,88,176)", cmyk: "(0.7,0.5,0,0.31)" }
+        ]
+      },
+      {
+        img: "facebook.png",
+        name: "facebook",
+        colours: [
+          { hex: "#4267B2", rgb: "(66,103,178)", cmyk: "(80,62,0,0)" },
+          { hex: "#ffffff", rgb: "(255,255,255)", cmyk: "(0,0,0,0)" }
+        ]
+      },
+      {
+        img: "shopify.png",
+        name: "shopify",
+        colours: [
+          {
+            hex: "#64943E",
+            rgb: "(100, 148, 62)",
+            cmyk: "(0.32, 0, 0.58, 0.41)"
+          },
+          {
+            hex: "#95BF47",
+            rgb: "(149, 191, 71)",
+            cmyk: "(0.21, 0, 0.62, 0.25)"
+          },
+          { hex: "#ffffff", rgb: "(255,255,255)", cmyk: "(0,0,0,0)" }
+        ]
+      },
+      {
+        img: "samsung.png",
+        name: "samsung",
+        colours: [
+          { hex: "#034EA2", rgb: "(3,78,162)", cmyk: "(99,78,2,0)" },
+          { hex: "#ffffff", rgb: "(255,255,255)", cmyk: "(0,0,0,0)" }
+        ]
+      },
+      {
+        img: "xbox.png",
+        name: "xbox",
+        colours: [
+          { hex: "#107C10", rgb: "(16,124,16)", cmyk: "(87,26,100,15)" }
+        ]
       }
     ];
 
@@ -275,18 +365,22 @@ export class DashboardComponent implements OnInit {
       );
     } else {
       this.appIcons.sort((a, b) =>
-      a.name > b.name ? -1 : a.name < b.name ? 1 : 0
-    );
+        a.name > b.name ? -1 : a.name < b.name ? 1 : 0
+      );
     }
   }
 
   onColorPickChange($event) {
-    console.log($event)
+    console.log($event);
   }
 
   onClickAddLogo() {
-    this.snackBar.open('Sucessfully requested to add ' + this.searchText.toUpperCase(), 'Close', {
-      duration: 2000
-    });
+    this.snackBar.open(
+      "Sucessfully requested to add " + this.searchText.toUpperCase(),
+      "Close",
+      {
+        duration: 2000
+      }
+    );
   }
 }

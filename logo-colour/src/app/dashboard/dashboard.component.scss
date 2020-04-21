@@ -18,7 +18,8 @@
 }
 
 .card_wrapper {
-  min-width: 49%;
+  width: 49%;
+  //min-width: 49%;
 }
 
 .filter_wrapper {
@@ -44,7 +45,7 @@ input {
 }
 
 .error_image {
-  width: 750px;
+  width: 45vw;
 }
 
 .button {
@@ -82,4 +83,24 @@ input {
 mat-toolbar {
   top: 0;
   position: fixed;
+}
+
+@media only screen and (max-width: 1260px) {
+  ._flex {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  ._flex_align_item_start {
+    align-items: center;
+  }
+
+  ._flex_col {
+    align-items: center;
+  }
+
+  .body_text {
+    text-align: center;
+  }
+
 }

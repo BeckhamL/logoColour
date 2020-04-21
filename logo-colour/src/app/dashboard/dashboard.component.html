@@ -6,16 +6,16 @@
   </mat-toolbar-row>
 </mat-toolbar> -->
 
+<div class="_flex _flex_align_item_center _justify_center">
+  <p class="_flex_col title_text">
+    SCROLL THROUGH TO FIND THE COLOURS USED BY
+    <span id="typed"></span>
+  </p>
+</div>
+
 <div class="_flex_col _justify_center intro_wrapper">
 
-  <div class="_flex _flex_align_item_center _justify_center">
-    <p class="_flex_col title_text">
-      SCROLL THROUGH TO FIND THE COLOURS USED BY
-      <span id="typed"></span>
-    </p>
-  </div>
-
-  <div class="_flex _space_evenly filter_wrapper" fxLayout.md="column">
+  <div class="_flex _space_evenly filter_wrapper">
     <div class="_flex_col _flex_align_item_start">
       <div class="body_text">SEARCH</div>
       <input [(ngModel)]="searchText" placeholder="Search logos" />
@@ -23,8 +23,8 @@
 
     <div class="_flex_col _flex_align_item_start">
       <div class="body_text">FILTER</div>
-      <input [(colorPicker)]="color" [style.background]="color" [value]="color" [cpOKButton]="true" [cpCancelButton]="true" [cpCancelButtonText]="'CLEAR'"
-        (colorPickerSelect)="onColorPickChange($event)" />
+      <input [(colorPicker)]="color" [style.background]="color" [value]="color" [cpOKButton]="true"
+        [cpCancelButton]="true" [cpCancelButtonText]="'CLEAR'" (colorPickerSelect)="onColorPickChange($event)" />
     </div>
 
     <div class="_flex_col _flex_align_item_start">
@@ -55,7 +55,8 @@
         <img src="../../assets/images/clip-programming.png" class="error_image">
       </div>
       <div class="_flex_col">
-        <span class="body_text">SORRY, WE COULDN'T FIND '{{searchText}}' <br> CLICK THIS BUTTON AND WE'LL ADD IT <br> (I PROMISE)</span>
+        <span class="body_text">SORRY, WE COULDN'T FIND '{{searchText}}' <br> CLICK THIS BUTTON AND WE'LL ADD IT <br> (I
+          PROMISE)</span>
         <div>
           <button class="button" (click)="onClickAddLogo()">ADD {{searchText}}</button>
         </div>
