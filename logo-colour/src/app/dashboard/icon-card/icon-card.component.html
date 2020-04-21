@@ -10,7 +10,7 @@
       <div class="icon_title_text">{{ app.name | uppercase }}</div>
     </div>
 
-    <div class="_flex_col" fxFlex="50%">
+    <div class="_flex_col logo_colour_wrapper" fxFlex="50%">
       <div *ngFor="let appColor of app?.colours" class="_flex _flex_align_item_center color_element">
         <div [ngStyle]="{'background-color': appColor?.hex}" class="color_box" [cdkCopyToClipboard]="appColor?.hex"
           tippyPopup [toolTipText]="appColor?.hex"></div>

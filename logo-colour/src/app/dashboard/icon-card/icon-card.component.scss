@@ -28,7 +28,7 @@
 }
 
 img {
-  width: 280px;
+  width: 250px;
 }
 
 .color_element {
@@ -42,6 +42,11 @@ img {
   border-radius: 10px;
   cursor: pointer;
   box-shadow: 0px 3px 12px #cccccc;
+}
+
+.logo_colour_wrapper {
+  max-height: 340px;
+  overflow: auto;
 }
 
 .color_text {

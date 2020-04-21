@@ -350,6 +350,37 @@ export class DashboardComponent implements OnInit {
         colours: [
           { hex: "#107C10", rgb: "(16,124,16)", cmyk: "(87,26,100,15)" }
         ]
+      },
+      {
+        img: "aldi.png",
+        name: "aldi",
+        colours: [
+          { hex: "#001F78", rgb: "(0,31,120)", cmyk: "(100,95,22,15)" },
+          { hex: "#00B5DB", rgb: "(0,181,219)", cmyk: "(72,6,9,0)" },
+          { hex: "#F03D14", rgb: "(240,61,20)", cmyk: "(0,91,100,0)" },
+          { hex: "#FA6E0A", rgb: "(250,110,10)", cmyk: "(0,70,100,0)" },
+          { hex: "#FFBF45", rgb: "(255,191,69)", cmyk: "(0,27,84,0)" },
+          { hex: "#ffffff", rgb: "(255,255,255)", cmyk: "(0,0,0,0)" }
+        ]
+      },
+      {
+        img: "google.png",
+        name: "google",
+        colours: [
+          { hex: "#4285F4", rgb: "(66,133,244)", cmyk: "(88,50,0,0)" },
+          { hex: "#DB4437", rgb: "(219,68,55)", cmyk: "(0,78,85,12)" },
+          { hex: "#F4B400", rgb: "(244,160,0)", cmyk: "(0,20,90,0)" },
+          { hex: "#0F9D58", rgb: "(15,157,88)", cmyk: "(82,0,67,11)" }
+        ]
+      },
+      {
+        img: "zappos.png",
+        name: "zappos",
+        colours: [
+          { hex: "#0076BD", rgb: "(1,118,189)", cmyk: "(87,49,0,0)" },
+          { hex: "#000000", rgb: "(0,0,0)", cmyk: "(0,0,0,0)" },
+          { hex: "#ffffff", rgb: "(255,255,255)", cmyk: "(0,0,0,0)" }
+        ]
       }
     ];
 
