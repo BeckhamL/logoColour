@@ -19,6 +19,7 @@ import { LogoFilterPipe } from "./pipes/logo-search.pipe";
 import { ColorPickerModule } from "ngx-color-picker";
 import { PopupDirective } from "./directives/popup-directive";
 import { LazyLoadImageModule } from "ng-lazyload-image";
+import { MatCheckboxModule } from "@angular/material/checkbox";
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,7 +43,8 @@ import { LazyLoadImageModule } from "ng-lazyload-image";
     MatToolbarModule,
     MatRadioModule,
     ColorPickerModule,
-    LazyLoadImageModule
+    LazyLoadImageModule,
+    MatCheckboxModule
   ],
   exports: [IconCardComponent, PopupDirective],
   providers: [],
