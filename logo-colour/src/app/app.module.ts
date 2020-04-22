@@ -20,6 +20,7 @@ import { ColorPickerModule } from "ngx-color-picker";
 import { PopupDirective } from "./directives/popup-directive";
 import { LazyLoadImageModule } from "ng-lazyload-image";
 import { MatCheckboxModule } from "@angular/material/checkbox";
+import { HttpClientModule } from "@angular/common/http";
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,7 +45,8 @@ import { MatCheckboxModule } from "@angular/material/checkbox";
     MatRadioModule,
     ColorPickerModule,
     LazyLoadImageModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    HttpClientModule
   ],
   exports: [IconCardComponent, PopupDirective],
   providers: [],

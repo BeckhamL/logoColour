@@ -6,6 +6,8 @@ import {
   LogoCategoryModel,
   LogoCategoryEnum
 } from "../models/logo_category_model";
+import { HttpClient } from "@angular/common/http";
+
 @Component({
   selector: "app-dashboard",
   templateUrl: "./dashboard.component.html",
@@ -40,9 +42,10 @@ export class DashboardComponent implements OnInit {
   ];
   typed: Typed;
 
-  constructor(private snackBar: MatSnackBar) {}
+  constructor(private snackBar: MatSnackBar, private httpClient: HttpClient) {}
 
   ngOnInit() {
+    this.getArray();
     this.typed = new Typed("#typed", this.typedOptions);
 
     this.appIcons = [
@@ -407,6 +410,12 @@ export class DashboardComponent implements OnInit {
     this.appIcons.sort((a, b) =>
       a.name < b.name ? -1 : a.name > b.name ? 1 : 0
     );
+  }
+
+  getArray() {
+    this.httpClient
+      .get("http://localhost:3000/api/cats")
+      .subscribe(x => console.log(x));
   }
 
   onFilterChange(filterValue: string) {
