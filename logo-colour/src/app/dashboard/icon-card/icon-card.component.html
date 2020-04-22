@@ -4,7 +4,7 @@
     <div class="_flex_col _flex_align_item_start" fxFlex="50%">
       <div class="_flex">
         <div class="_flex _flex_align_item_center _justify_center image_wrapper">
-          <img src="../../../assets/images/{{app.img}}">
+          <img [lazyLoad]="image">
         </div>
       </div>
       <div class="icon_title_text">{{ app.name | uppercase }}</div>
