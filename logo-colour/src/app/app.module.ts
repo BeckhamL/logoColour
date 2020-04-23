@@ -21,6 +21,7 @@ import { PopupDirective } from "./directives/popup-directive";
 import { LazyLoadImageModule } from "ng-lazyload-image";
 import { MatCheckboxModule } from "@angular/material/checkbox";
 import { HttpClientModule } from "@angular/common/http";
+import { DataService } from "./services/data.service";
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,7 +50,7 @@ import { HttpClientModule } from "@angular/common/http";
     HttpClientModule
   ],
   exports: [IconCardComponent, PopupDirective],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

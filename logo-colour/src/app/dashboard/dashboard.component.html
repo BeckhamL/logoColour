@@ -48,21 +48,21 @@
 </div>
 
 <div class="_flex _flex_wrap _justify_center">
-  <div *ngIf="(appIcons | logoFilter: searchText).length === 0">
-    <div class="_flex _flex_align_item_center">
+  <!-- <div *ngIf="(appIcons | logoFilter: searchText).length === 0">
+  <div class="_flex _flex_align_item_center">
+    <div>
+      <img src="../../assets/images/clip-programming.png" class="error_image">
+    </div>
+    <div class="_flex_col">
+      <span class="body_text">SORRY, WE COULDN'T FIND '{{searchText}}' <br> CLICK THIS BUTTON AND WE'LL ADD IT <br> (I
+        PROMISE)</span>
       <div>
-        <img src="../../assets/images/clip-programming.png" class="error_image">
-      </div>
-      <div class="_flex_col">
-        <span class="body_text">SORRY, WE COULDN'T FIND '{{searchText}}' <br> CLICK THIS BUTTON AND WE'LL ADD IT <br> (I
-          PROMISE)</span>
-        <div>
-          <button class="button" (click)="onClickAddLogo()">ADD {{searchText}}</button>
-        </div>
+        <button class="button" (click)="onClickAddLogo()">ADD {{searchText}}</button>
       </div>
     </div>
   </div>
-  <span *ngFor="let app of appIcons | logoFilter: searchText" class="card_wrapper">
+  </div> -->
+  <span *ngFor="let app of appIcons " class="card_wrapper">
     <app-icon-card [app]="app"></app-icon-card>
   </span>
 </div>
