@@ -17,6 +17,7 @@ export class DashboardComponent implements OnInit {
   appIcons: LogoModel[];
   searchText = "";
   color = "#ffffff";
+  noMatchingHex = false;
   typedOptions = {
     strings: [
       "AMAZON",
@@ -54,6 +55,7 @@ export class DashboardComponent implements OnInit {
   }
 
   getAllLogos() {
+    this.searchText = "";
     this.dataService.getAllLogos().subscribe(logos => {
       if (logos) {
         this.appIcons = logos;
@@ -76,8 +78,42 @@ export class DashboardComponent implements OnInit {
     }
   }
 
-  onColorPickChange($event) {
-    console.log($event);
+  onColorPickChange($event: string) {
+    this.appIcons = this.appIcons.filter(
+      x => this.checkifRGBMatch(x, $event) === true
+    );
+  }
+
+  checkifRGBMatch(logo: LogoModel, colourSent: string): boolean {
+    for (let i = 0; i < logo.colours.length; i++) {
+      if (this.hexColorDelta(logo.colours[i].hex, colourSent) > 0.8) {
+        this.noMatchingHex = false;
+        return true;
+      } else {
+        this.noMatchingHex = true;
+        return false;
+      }
+    }
+  }
+
+  hexColorDelta(hex1: string, hex2: string) {
+    var r1 = parseInt(hex1.substring(1, 3), 16);
+    var g1 = parseInt(hex1.substring(3, 5), 16);
+    var b1 = parseInt(hex1.substring(5, 7), 16);
+
+    var r2 = parseInt(hex2.substring(1, 3), 16);
+    var g2 = parseInt(hex2.substring(3, 5), 16);
+    var b2 = parseInt(hex2.substring(5, 7), 16);
+
+    var r = 255 - Math.abs(r1 - r2);
+    var g = 255 - Math.abs(g1 - g2);
+    var b = 255 - Math.abs(b1 - b2);
+
+    r /= 255;
+    g /= 255;
+    b /= 255;
+
+    return (r + g + b) / 3;
   }
 
   onClickAddLogo() {
