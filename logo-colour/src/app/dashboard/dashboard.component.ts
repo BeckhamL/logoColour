@@ -46,10 +46,17 @@ export class DashboardComponent implements OnInit {
 
   @HostListener("window:scroll")
   onscroll() {
+    const header = document.getElementById("header");
+    const header_title = document.getElementById("header_title");
     if (window.pageYOffset >= 600) {
       this.showNavBarElements = true;
+
+      header.classList.add("box_shadow");
+      header_title.classList.add("font_40");
     } else {
       this.showNavBarElements = false;
+      header.classList.remove("box_shadow");
+      header_title.classList.remove("font_40");
     }
   }
 

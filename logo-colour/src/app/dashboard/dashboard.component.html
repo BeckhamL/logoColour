@@ -6,28 +6,24 @@
   </mat-toolbar-row>
 </mat-toolbar> -->
 
-<header>
-  <div class="_flex _space_between">
-    <h1 (click)="onClickLogo()">LOGO COLOUR</h1>
-    <div [ngClass]="showNavBarElements ? 'd-show' : 'd-none'">
-      <input [(ngModel)]="searchText" placeholder="Search logos" />
-      <input
-        [(colorPicker)]="color"
-        [style.background]="color"
-        [value]="color"
-        [cpOKButton]="true"
-        [cpCancelButton]="true"
-        [cpCancelButtonText]="'CLEAR'"
-        (colorPickerSelect)="onColorPickChange($event)"
-        [cpSaveClickOutside]="false"
-        (colorPickerCancel)="getAllLogos()"
-      />
-      <mat-form-field>
-        <select matNativeControl (change)="onFilterChange($event.target.value)">
-          <option value="atoz">Sort Icons (A-Z)</option>
-          <option value="ztoa">Sort Icons (Z-A)</option>
-        </select>
-      </mat-form-field>
+<header id="header">
+  <div class="_flex _space_between _flex_align_item_center header_wrapper">
+    <h1 (click)="onClickLogo()" id="header_title">LOGO COLOUR</h1>
+    <div [ngClass]="showNavBarElements ? 'd-show' : 'd-none'" class="_space_between" fxFlex="25%">
+
+      <div>
+        <mat-form-field>
+          <select matNativeControl (change)="onFilterChange($event.target.value)">
+            <option value="atoz">Sort Icons (A-Z)</option>
+            <option value="ztoa">Sort Icons (Z-A)</option>
+          </select>
+        </mat-form-field>
+      </div>
+
+      <div>
+        <input [(ngModel)]="searchText" placeholder="Search logos" />
+      </div>
+
     </div>
   </div>
 </header>
@@ -48,17 +44,9 @@
 
     <div class="_flex_col _flex_align_item_start">
       <div class="body_text">FILTER</div>
-      <input
-        [(colorPicker)]="color"
-        [style.background]="color"
-        [value]="color"
-        [cpOKButton]="true"
-        [cpCancelButton]="true"
-        [cpCancelButtonText]="'CLEAR'"
-        (colorPickerSelect)="onColorPickChange($event)"
-        [cpSaveClickOutside]="false"
-        (colorPickerCancel)="getAllLogos()"
-      />
+      <input [(colorPicker)]="color" [style.background]="color" [value]="color" [cpOKButton]="true"
+        [cpCancelButton]="true" [cpCancelButtonText]="'CLEAR'" (colorPickerSelect)="onColorPickChange($event)"
+        [cpSaveClickOutside]="false" (colorPickerCancel)="getAllLogos()" />
     </div>
 
     <div class="_flex_col _flex_align_item_start">
@@ -79,17 +67,12 @@
   <div *ngIf="(appIcons | logoFilter: searchText).length === 0">
     <div class="_flex _flex_align_item_center">
       <div>
-        <img
-          src="../../assets/images/clip-programming.png"
-          class="error_image"
-        />
+        <img src="../../assets/images/clip-programming.png" class="error_image" />
       </div>
       <div class="_flex_col" *ngIf="!noMatchingHex; else noMatchingHexError">
-        <span class="body_text"
-          >SORRY, WE COULDN'T FIND '{{ searchText }}' <br />
+        <span class="body_text">SORRY, WE COULDN'T FIND '{{ searchText }}' <br />
           CLICK THIS BUTTON AND WE'LL ADD IT <br />
-          (I PROMISE)</span
-        >
+          (I PROMISE)</span>
         <div>
           <button class="button" (click)="onClickAddLogo()">
             ADD {{ searchText }}
@@ -97,16 +80,11 @@
         </div>
       </div>
       <ng-template #noMatchingHexError>
-        <span class="body_text"
-          >SORRY, WE COULDN'T FIND A SIMILAR HEX COLOUR :(</span
-        >
+        <span class="body_text">SORRY, WE COULDN'T FIND A SIMILAR HEX COLOUR :(</span>
       </ng-template>
     </div>
   </div>
-  <span
-    *ngFor="let app of appIcons | logoFilter: searchText"
-    class="card_wrapper"
-  >
+  <span *ngFor="let app of appIcons | logoFilter: searchText" class="card_wrapper">
     <app-icon-card [app]="app"></app-icon-card>
   </span>
 </div>

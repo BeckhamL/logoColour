@@ -119,14 +119,28 @@ mat-checkbox {
 
 h1 {
   cursor: pointer;
+
+  font-size: 20px;
 }
 
 // Logic
 header {
-  background-color: orange;
+  background-color: white;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 2;
   margin-bottom: 20px;
+}
+
+.header_wrapper {
+  padding: 0px 30px;
+}
+
+.box_shadow {
+  box-shadow: 1px 1px 8px #cccccc;
+}
+
+.font_40 {
+  font-size: 36px;
 }
