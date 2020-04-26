@@ -108,3 +108,25 @@ mat-checkbox {
   }
 
 }
+
+.d-show {
+  display: flex;
+}
+
+.d-none {
+  display: none
+}
+
+h1 {
+  cursor: pointer;
+}
+
+// Logic
+header {
+  background-color: orange;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  margin-bottom: 20px;
+}

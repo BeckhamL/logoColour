@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, HostListener } from "@angular/core";
 import { LogoModel } from "../models/logo_model";
 import Typed from "typed.js";
 import { MatSnackBar } from "@angular/material/snack-bar";
@@ -42,6 +42,16 @@ export class DashboardComponent implements OnInit {
     { name: LogoCategoryEnum.retail, selected: false }
   ];
   typed: Typed;
+  showNavBarElements = false;
+
+  @HostListener("window:scroll")
+  onscroll() {
+    if (window.pageYOffset >= 600) {
+      this.showNavBarElements = true;
+    } else {
+      this.showNavBarElements = false;
+    }
+  }
 
   constructor(
     private snackBar: MatSnackBar,
@@ -52,6 +62,10 @@ export class DashboardComponent implements OnInit {
     this.appIcons = [];
     this.getAllLogos();
     this.typed = new Typed("#typed", this.typedOptions);
+  }
+
+  onClickLogo() {
+    window.scroll(0, 0);
   }
 
   getAllLogos() {
